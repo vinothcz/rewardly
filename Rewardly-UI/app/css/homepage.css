@@ -1,0 +1,81 @@
+body{
+	background-color: #F3DB81;
+
+}
+
+h2{
+	margin-top: 0px !important;
+}
+
+.app-title, .app-title:hover
+{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+
+}
+
+.textbox{
+
+    width: 50%;
+    float: right;
+
+}
+
+.label{
+	display:inline-block;
+}
+.outer-frame{
+
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+.input-boxes{
+
+    width: 70%;
+    display: inline-block;
+
+
+}
+
+.select-style{
+	float:left;
+    width: 30%;
+
+}
+
+.button-box{
+    height: 80px;
+    width: 25%; 
+    display: inline;
+    float:right;
+
+}
+
+.reward-btn{
+
+	float:right;
+	padding:35px !important;
+	margin-top:0px !important;
+	display: inline-block;
+	font-size: 30px;
+	border-radius: 7px !important;
+
+}
+
+.reward-banner{
+		padding:20px;
+		border-radius: 10px;
+		text-align:center;
+		margin:0 auto;
+		background-color: grey;
+
+}
+
+.msgbox
+{
+	width:100%;
+	margin-bottom:0px !important;
+}
