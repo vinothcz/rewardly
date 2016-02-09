@@ -1,0 +1,87 @@
+@pagr-records-color:    @primary-black-50;
+
+.cs-pagr-wrapper {
+  padding: 16px 0 32px 0;
+
+  .cs-pagr-controls {
+    li {
+      font-size: 14px;
+    }
+
+    li.cs-pagr-nav a {
+      width: 30px;
+      line-height: 30px;
+      font-size: 24px;
+      font-weight: normal;
+      border: @border;
+      border-radius: 2px;
+      color: @primary-black-90;
+      margin-left: 8px;
+      .gradient(top; #fff; 40%; @primary-black-4; 100%);
+
+      &:hover {
+        border-color: @primary-black-60;
+      }
+    }
+
+    li.cs-pagr-pages {
+      margin: 0;
+
+      a {
+        height: 1.5em;
+        width: 2.5em;
+      }
+    }
+  }
+
+  .cs-pagr-disabled {
+    .opacity(50);
+
+    &:hover {
+      .opacity(50);
+    }
+  }
+
+  .cs-pagr-input {
+    margin-right: 4px;
+
+    input {
+      width: 64px;
+      text-align: left;
+      padding: 8px 16px;
+      line-height: 1;
+      margin: 0 4px 0 0;
+      height: 32px;
+    }
+  }
+  
+  .cs-pagr-select {
+    padding: 0;
+    width: 5em;
+    margin: 0 .2em;
+  }
+
+  .cs-pagr-records {
+    color: @pagr-records-color;
+    font-style: italic;
+    line-height: 32px;
+  }
+
+  .cs-pagr-more {
+    line-height: 2;
+  }
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+}
+
+.cs-pagr-wrapper-small {
+  border: @border;
+  padding: 8px;
+  border-radius: 2px;
+}

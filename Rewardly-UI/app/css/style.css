@@ -1,0 +1,77 @@
+body{
+	background-color: #f9f9f9;
+}
+
+h2{
+	margin-top: 0px !important;
+}
+
+.input-content{
+	margin:20 0px;
+}
+
+.action-content{
+	text-align:center;
+	display:inline-block;
+	margin-top:5px;
+}
+
+.login
+{
+	background-color: #F3F3F3;
+	border-radius: 5px;
+	width:250px;
+	height:270px;
+	padding:20px;
+	margin:auto;
+}
+
+.submit-btn{
+
+	float:right;
+	display: inline-block;
+	margin-top:0px !important;
+
+}
+
+.image{
+	padding:0 15px;
+}
+
+.remember{
+	display:inline;
+	float:left;
+
+}
+
+.forgot-pwd{
+	float:right;
+	display:inline-block;
+}
+
+.textbox{
+	min-width: 100%;
+}
+
+.label{
+	display:inline-block;
+}
+
+.holidays{
+	width:400px;
+	height:150px;
+	margin:50px auto;
+	border: 1px solid #FA715A;
+	border-radius: 5px;
+}
+
+
+.holiday-header, .holiday-message {
+	text-align: center;
+	margin:auto;
+}
+
+.selection{
+	width:100px;
+	float:right;
+}

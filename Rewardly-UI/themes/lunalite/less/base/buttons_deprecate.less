@@ -1,0 +1,219 @@
+// Set base values for justified buttons and inputs
+.buttonX (@index) when (@index > 0) {
+  > *:first-child:nth-last-child(@{index}) {
+    width: percentage(1 / @index);
+  }
+
+  > *:first-child:nth-last-child(@{index}) ~ * {
+    width: percentage(1 / @index);
+  }
+
+  .buttonX(@index - 1);
+}
+
+.btn-group {
+
+  &.vertical > * {
+    display: block;
+    float: none;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    margin-right: 0;
+    margin-top: -1px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:first-child {
+      border-radius: 3px 3px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  
+  &.justified > * {
+    .border-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.justified {
+    .buttonX(12);
+  }
+}
+
+// Previous and Next Worflow Buttons
+.csstransforms {
+  .btn, button {
+
+    &.previous, &.next {
+      position: relative;
+      overflow: visible;
+      padding: 8px 12px;
+
+      .before-and-after() {
+        content: '';
+        position: absolute;
+        width: 1.25em;
+        z-index: 2;
+      }
+      &:before {
+        top: 0;
+        bottom: 50%;
+        background-color: #fff;
+        border-bottom-color: transparent;
+        .before-and-after;
+      }
+      &:after {
+        top: 50%;
+        bottom: 0;
+        .gradient(top; #fff; 0%; @primary-black-4; 100%);
+        border-top-color: transparent;
+        .before-and-after;
+      }
+
+      &:hover {
+
+        &:before {
+          border-color: @button-border-color;
+          background-color: @primary-black-3;
+        }
+        &:after {
+          border-color: @button-border-color;
+          .gradient(top; @primary-black-3; 0%; @primary-black-9; 100%);
+        }
+      }
+
+      &:active {
+        color: @primary-blue-120;
+        box-shadow: inset 2px 2px 3px 0 rgba(0,0,0,0.15);
+
+        &:before, &:after {
+          color: @primary-blue-120;
+          border-color: @button-border-color;
+        }
+      }
+
+      &:focus {
+        &:before, &:after {
+          border-color: @button-border-color;
+        }
+      }
+    }
+
+    &.previous {
+      border-left-width: 0;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      margin-left: 8px;
+
+      .before-and-after() {
+        left: -0.57em;
+        border-left: 2px solid @general-border-color;
+      }
+      &:before {
+        .before-and-after;
+        .skew(-45deg, 0);
+        border-bottom-left-radius: 2px;
+      }
+      &:after {
+        .before-and-after;
+        .skew(45deg, 0);
+        border-top-left-radius: 2px;
+      }
+
+      &:active {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+
+        &:before {
+          box-shadow: inset 2px 3px 3px -1px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    &.next {
+      border-right-width: 0;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      .before-and-after() {
+        right: -0.57em;
+        border-right: 2px solid @general-border-color;
+      }
+      &:before {
+        .before-and-after;
+        .skew(45deg, 0);
+        border-bottom-right-radius: 2px;
+      }
+      &:after {
+        .before-and-after;
+        .skew(-45deg, 0);
+        border-top-right-radius: 2px;
+      }
+
+      &:active {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        &:before {
+          box-shadow: inset -2px 3px 3px -1px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    &.previous.primary, &.next.primary {
+
+      &:before {
+        border-color: @primary-blue-110;
+        background-color: @primary-blue-90;
+      }
+      &:after {
+        border-color: @primary-blue-110;
+        .gradient(top; @primary-blue-90; 0%; @primary-blue; 100%);
+      }
+
+      &:hover {
+
+        &:before {
+          background-color: @primary-blue;
+          border-color: @primary-blue-140;
+        }
+        &:after {
+          .gradient(top; @primary-blue; 0%; @primary-blue-110; 100%);
+          border-color: @primary-blue-140;
+        }
+      }
+
+      &:active {
+        color: #fff;
+        background-color: @primary-blue-110;
+
+        &:before, &:after {
+          border-color: @primary-blue-140;
+        }
+      }
+
+      &:focus {
+        &:before, &:after {
+          border-color: @primary-blue-140;
+        }
+      }
+    }
+  }
+}
+.no-csstransforms {
+  .btn,
+  button {
+    &.previous:before {
+      content: '\2190';
+      margin-right: 0.25em;
+    }
+    &.next:after {
+      content: '\2192';
+      margin-left: 0.25em;
+    }
+  }
+}

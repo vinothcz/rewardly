@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "BentonSans";
+  src: url("../fonts/BentonSansRegular/fd4be2ce-009e-4d1e-9736-a0f339090060-2.eot");
+  src: url("../fonts/BentonSansRegular/fd4be2ce-009e-4d1e-9736-a0f339090060-2.eot?") format("embedded-opentype"),
+       url("../fonts/BentonSansRegular/fd4be2ce-009e-4d1e-9736-a0f339090060-3.woff") format("woff"),
+       url("../fonts/BentonSansRegular/fd4be2ce-009e-4d1e-9736-a0f339090060-1.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BentonSansBold";
+  src: url("../fonts/BentonSansBold/687e8e14-cdee-4849-8343-cc8bbf12217d-2.eot");
+  src: url("../fonts/BentonSansBold/687e8e14-cdee-4849-8343-cc8bbf12217d-2.eot?") format("embedded-opentype"),
+       url("../fonts/BentonSansBold/687e8e14-cdee-4849-8343-cc8bbf12217d-3.woff") format("woff"),
+       url("../fonts/BentonSansBold/687e8e14-cdee-4849-8343-cc8bbf12217d-1.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BentonSansMedium";
+  src: url("../fonts/BentonSansMedium/b5842965-a2d4-42fe-bc99-ae931c71e934-2.eot");
+  src: url("../fonts/BentonSansMedium/b5842965-a2d4-42fe-bc99-ae931c71e934-2.eot?") format("embedded-opentype"),
+       url("../fonts/BentonSansMedium/b5842965-a2d4-42fe-bc99-ae931c71e934-3.woff") format("woff"),
+       url("../fonts/BentonSansMedium/b5842965-a2d4-42fe-bc99-ae931c71e934-1.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BentonSansLight";
+  src: url("../fonts/BentonSansLight/6a105fba-4552-4884-9745-a5341107c21d-2.eot");
+  src: url("../fonts/BentonSansLight/6a105fba-4552-4884-9745-a5341107c21d-2.eot?") format("embedded-opentype"),
+       url("../fonts/BentonSansLight/6a105fba-4552-4884-9745-a5341107c21d-3.woff") format("woff"),
+       url("../fonts/BentonSansLight/6a105fba-4552-4884-9745-a5341107c21d-1.ttf") format("truetype");
+}
+
+body {
+  background-color: @base-bg-color;
+  color: @base-text-color;
+  font-size: @base-font-size;
+  font-family: @base-font-family;
+  line-height: @base-line-height;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  .bentonsanslight;
+  font-size: 32px;
+  line-height: 40px;
+  color: @primary-black;
+  margin: 32px 0 16px 0;
+}
+
+h2, .h2 {
+  .bentonsansmedium;
+  font-size: 24px;
+  line-height: 32px;
+  color: @primary-black;
+  margin: 32px 0 8px 0;
+}
+
+h3, .h3 {
+  .bentonsansmedium;
+  font-size: 20px;
+  line-height: 24px;
+  color: @primary-black-90;
+  margin: 32px 0 24px 0;
+  padding: 5px 0 3px 0;
+}
+
+h4, .h4 {
+  .bentonsansregular;
+  font-size: 20px;
+  line-height: 24px;
+  color: @primary-black-90;
+  margin: 32px 0 24px;
+  padding: 5px 0 10px;
+  border-bottom: 1px solid @primary-black-20;
+}
+
+h5, .h5 {
+  .bentonsansmedium;
+  font-size: 16px;
+  color: @primary-black-70;
+  line-height: 24px;
+  margin: 16px 0;
+  padding: 6px 0 2px;
+  text-transform: uppercase;
+}
+
+h6, .h6 {
+  .bentonsansmedium;
+  font-size: 16px;
+  color: @primary-black-70;
+  line-height: 24px;
+  margin: 16px 0;
+  padding: 6px 0 2px;
+}
+
+// First text element in a panel or in a ui-tab
+.panel, .ui-tabs-panel {
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child,
+  > p:first-child {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+// Headings separated by divs
+h1 + .row > [class^=col] > h2:first-child,
+h2 + .row > [class^=col] > h3:first-child,
+h2 + .row > [class^=col] > h4:first-child,
+h2 + .row > [class^=col] > h5:first-child,
+h2 + .row > [class^=col] > h6:first-child,
+h3 + .row > [class^=col] > h4:first-child,
+h3 + .row > [class^=col] > h5:first-child,
+h3 + .row > [class^=col] > h6:first-child,
+h4 + .row > [class^=col] > h5:first-child,
+h4 + .row > [class^=col] > h6:first-child,
+h5 + .row > [class^=col] > h6:first-child,
+h1 + [class^=col] > h2:first-child,
+h2 + [class^=col] > h3:first-child,
+h2 + [class^=col] > h4:first-child,
+h2 + [class^=col] > h5:first-child,
+h2 + [class^=col] > h6:first-child,
+h3 + [class^=col] > h4:first-child,
+h3 + [class^=col] > h5:first-child,
+h3 + [class^=col] > h6:first-child,
+h4 + [class^=col] > h5:first-child,
+h4 + [class^=col] > h6:first-child,
+h5 + [class^=col] > h6:first-child {
+  margin-top: 0;
+}
+
+a {
+  color: @primary-blue;
+  text-decoration: none;
+  cursor: default;
+
+  &[href] {
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+p {
+  line-height: @base-line-height;
+  margin: 8px 0;
+  padding: 8px 0 0;
+}
+
+em, .em {
+  color: @primary-black-140;
+  font-style: normal;
+}
+
+ul, ol, dd {
+  padding: 0 0 0 16px;
+}
+ul, ol, dl {
+  margin: 0 0 16px;
+}
+
+pre {
+  overflow: visible;
+}
+
+hr {
+  background: @primary-black-20;
+  border: 0;
+  height: 1px;
+  margin: 15px 0 16px;
+}
+
+@media (min-width: 1213px) {
+  body {
+    font-size: 14px;
+  }
+  
+  p {
+    padding: 7px 0 1px;
+  }
+}

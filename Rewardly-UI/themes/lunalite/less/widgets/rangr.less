@@ -1,0 +1,116 @@
+.cs-rangr-options {
+  float: left;
+  font-size: 13px;
+  padding: 6px 0;
+  width: 120px;
+
+  li:hover, a:hover {
+    background-color: #1077c7;
+    color: #fff;
+  }
+
+  li {
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    &.cs-selectr-selected {
+      background-color: #1077c7;
+      color: #fff;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .caret4 {
+      position: absolute;
+      right: 8px;
+      top: 14px;
+    }
+
+  }
+
+  .cs-rangr-line {
+    border-top: 1px solid #EEE;
+    cursor: default;
+    display: block;
+    height: 0;
+    line-height: 0;
+    margin: 5px 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+.cs-rangr-container {
+  background: #fafafa;
+  border-left: 1px solid #dadada;
+  float: left;
+  margin-left: -1px;
+  padding: 10px 0 0;
+}
+
+.cs-rangr-container .message {
+  margin: 0 11px;
+}
+
+.cs-rangr-ranges {
+  padding: 10px 11px 15px;
+  width: auto;
+
+  .cs-dately-wrapper {
+    > .caret6 {
+      display: none;
+    }
+  }
+}
+
+.cs-rangr-ranges-open {
+  width: auto;
+}
+
+.cs-rangr-datepicker {
+  float: left;
+}
+
+.cs-rangr-datepicker-end {
+  margin-left: 15px;
+}
+
+.cs-rangr-buttonpane {
+  background-color: #fff;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);
+  clear: both;
+  padding: 10px 11px 5px;
+  text-align: right;
+
+  button[type=reset] {
+    color: @primary-black;
+    text-transform: capitalize;
+  }
+}
+
+.cs-rangr-buttonpane * {
+  margin-left: 15px;
+}
+
+.cs-rangr .cs-arrow-vertical div {
+  background-color: #fff;
+  border: 1px solid #dadada;
+}
+
+.cs-rangr-all .cs-arrow {
+  display: none;
+}
+
+.cs-rangr-placeholder {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+.cs-selectr-link > label {
+  margin: 0;
+}

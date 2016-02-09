@@ -1,0 +1,155 @@
+@nav-bg-color:              @primary-black-3;   // Primary Navigation list item hover and Secondary Navigation regular background color
+
+.oldie #nav {
+  border-bottom: @border;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+
+  .primary {
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    // Primary Navigation
+    > li {
+      float: left;
+      position: relative;
+      margin-left: 1px;
+      margin-right: 1px;
+      padding: 0 9px;
+    }
+
+    > li > a {
+      display: block;
+      color: @primary-black-60;
+      text-transform: uppercase;
+      line-height: 16px;
+      padding: 16px 0 13px 0;
+      border-bottom: 3px solid transparent;
+    }
+
+    > .current > a {
+      color: @primary-black-110;
+      border-bottom: 3px solid @primary-blue;
+    }
+
+    > .current:hover > a,
+    > .current.hover > a {
+      border-bottom: 3px solid transparent;
+    }
+
+    > li.hover, > li:hover {
+      background-color: @nav-bg-color;
+      padding: 0 8px;    
+      border-left: @border;
+      border-right: @border;
+
+      > a {
+        color: @primary-blue-120;
+      }
+
+      ul {
+        display: block;
+      }
+    }
+
+    & > li.no-menu.hover, & > li.no-menu:hover { // For primary nav items with no dropdown
+      background-color: @nav-bg-color;
+      padding: 0 9px;
+      border-left: none;
+      border-right: none;
+    }
+
+    // Secondary/Sub Navigation
+    ul {
+      position: absolute;
+      display: none;
+      top: 100%;
+      left: -1px;
+      width: @dropdown-width;
+      .box-shadow;
+      background-color: @nav-bg-color;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 0 0 2px 2px;
+      padding: 4px 0 8px 0;
+      border-color: @nav-bg-color @general-border-color @general-border-color;
+      z-index: 200;
+
+      a:hover {
+        color: @primary-blue-120;
+        background-color: #fff;
+      }
+
+      .group {
+        font-weight: bold;
+        padding: 0 8px 4px;
+      }
+
+      a {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: @primary-black;
+        padding: @dropdown-item-padding;
+      }
+    }
+  }
+
+  // Supporting old markup, where the anchor doesn't have a .btn class
+  .focus {
+    position: relative;
+    text-align: center;
+    margin:0;
+    padding:0;
+
+    a {
+      margin: 8px 0 0 15px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: @general-border-color;
+      padding: @button-padding;
+      .gradient(top; #fff; 40%; @primary-black-4; 100%);
+      color: @primary-blue;
+      border-radius: 2px;
+      line-height: 15px;
+      font-weight: @bold-weight;
+      text-decoration: none;
+      width: auto;
+      transition: none;
+      -webkit-transition: none;
+      display: inline-block;
+
+      &:focus {
+        border-color: @primary-blue;
+      }
+
+      &:hover {
+        .gradient(top; @primary-black-3; 40%; @primary-black-9; 100%);
+        border-color: @primary-blue;
+
+        &[disabled], &.disabled {
+          border-color: @primary-black-10;
+        }
+      }
+
+      &:active {
+        background-color: @primary-black-9;
+        border-color: @primary-blue;
+        color: @primary-blue-120;
+        box-shadow: inset 2px 2px 3px 0 rgba(0,0,0,0.15);
+      }
+    }
+  }
+}

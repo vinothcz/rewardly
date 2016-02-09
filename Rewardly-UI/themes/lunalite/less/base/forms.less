@@ -1,0 +1,63 @@
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+fieldset {
+  margin: 0;
+
+  input, textarea, select {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .row {
+    margin-bottom: 8px;
+  }
+
+  .row:last-child {
+    margin-bottom: 0;
+
+    input, textarea, select {
+      margin-bottom: 0;
+    }
+  }
+
+  .row > label,
+  [class^="col"] > label {
+    font-weight: bold;
+  }
+
+  label {
+    line-height: 16px;
+  }
+}
+
+fieldset.horizontal {
+
+  label {
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  .row > * label {
+    font-weight: normal;
+    text-align: left;
+  }
+
+  &.panel {
+    padding-bottom: 15px;
+  }
+}
+
+legend {
+  font-size: 11px;
+  padding: 2px 0 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.option-list {
+  .opt-list;
+}

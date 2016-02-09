@@ -1,0 +1,119 @@
+@th-color:          @primary-black-70;
+@th-hover-bg:       @primary-black-7;
+@th-hover-color:    @primary-blue;
+@th-current-color:  @primary-black;
+@th-current-bg:     @primary-black-10;
+
+@i-color:           @primary-black-40;
+@i-hover:           @primary-black-70;
+@i-sorted:          @primary-black;
+
+.cs-grid-wrapper {
+
+  thead {
+
+    .sortcolumn {
+      padding: 0;
+
+      a {
+        padding: 12px 24px 12px 12px;
+      }
+    }
+
+    .cs-grid-bulk a {
+      color: @th-color;
+      text-decoration: none;
+
+      &:hover,
+      &.current {
+        color: @th-current-color;
+
+        i {
+          border-color: @i-sorted;
+        }
+      }
+
+      i {
+        border-color: @i-color;
+      }
+    }
+
+    a[data-cs-sortcolumn] {
+      color: @th-color;
+      text-decoration: none;
+
+      &:hover {
+        color: @th-hover-color;
+        background-color: @th-hover-bg;
+
+        i {
+          border-color: @i-hover;
+        }
+      }
+      &.current {
+        color: @th-current-color;
+        background-color: @th-current-bg;
+
+        i {
+          border-color: @i-color;
+        }
+      }
+
+      i {
+        border-color: @i-color;
+        right: 12px;
+      }
+
+      i.sortdirection {
+        border-color: @i-sorted;
+      }
+
+      i.south {
+        margin-top: 1px;
+      }
+      i.north {
+        margin-top: -5px;
+      }
+    }
+  }
+
+  th {
+    font-weight: bold;
+
+    &.cs-grid-colgroup {
+      background-color: @primary-black-4;
+      border-top: @border;
+    }
+
+    &.cs-grid-colgroup-start {
+      border-left: @border;
+    }
+
+    &.cs-grid-colgroup-end {
+      border-right: @border;
+    }
+  }
+
+  tr {
+    &.cs-grid-super {
+      line-height: 16px;
+
+      th {
+        padding-bottom: 0;
+        border-bottom: none;
+        font-weight: bold;
+        text-align: center;
+        color: @primary-black;
+
+        &.cs-grid-colgroup {
+          border-left: @border;
+          border-right: @border;
+        }
+      }
+    }
+
+    &.cs-grid-super + tr th {
+      border-top: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+body {
+
+  ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+    background-color:@primary-black-3;
+    &:vertical{
+      border-radius:0 4px 0 0;
+      border-left:1px solid @primary-black-30;
+    }
+    &:horizontal{
+      border-radius:0 0 4px 4px;
+      border-top:1px solid @primary-black-30;
+    }
+  }
+
+  ::-webkit-scrollbar-corner {
+    border-radius:4px;
+    background-color:@primary-black-3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width:8px;
+    height:32px;
+    border-radius: 16px;
+    background-color: @primary-black-50;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    &:hover {
+      background-color: @primary-blue-110;
+    }
+    &:active {
+      background-color: @primary-blue-140;
+    }
+  }
+
+  scrollbar-base-color: @primary-black-50;
+  scrollbar-arrow-color: #fff;
+  scrollbar-track-color: @primary-black-3;
+  scrollbar-shadow-color: @primary-black-3;
+  scrollbar-highlight-color: #ccc;
+  scrollbar-3dlight-color: #ccc;
+  scrollbar-darkshadow-color: @primary-black-50;   
+}
