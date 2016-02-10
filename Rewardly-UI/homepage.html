@@ -1,100 +1,129 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="lunalite/css/lunalite.css">
-        <link rel="stylesheet" type="text/css" href="crux/css/widgets.css">
-        <link rel="stylesheet" type="text/css" href="app/css/homepage.css">
-    </head>
-    <body>
-    	<header id="header">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="lunalite/css/lunalite.css">
+		<link rel="stylesheet" type="text/css" href="crux/css/widgets.css">
+		<link rel="stylesheet" type="text/css" href="app/css/homepage.css">
+	</head>
+	<body>
+		<header id="header">
 		  <div class="container title">
-		    <div class="row">
-		      <div class="col8">
-		        <h1><a href="/">
-		          <i id="abclogo"></i>
-		          <em>REWARDLY!!</em>
-		        </a></h1>
-		      </div>
-		      <div class="selection col2" >
-		      	<select class="selectrEl" >
-		      		<option>Profile</option>
-		      		<option>Products</option>
-		      		<option>Layout</option>
-		      	</select>
+			<div class="row">
+			  <div class="col8">
+				<h1><a href="/">
+				  <i id="abclogo"></i>
+				  <em>REWARDLY!!</em>
+				</a></h1>
+			  </div>
+			  <div class="selection col2" >
+				<select class="selectrEl" >
+					<option>Profile</option>
+					<option>Products</option>
+					<option>Layout</option>
+				</select>
 				</div>
 			</div>
-		    </div>
+			</div>
 		</header>
-	    <div id="body">
-	      <div class="container">	        
-		      	<div class="outer-frame">
-		      		<div class="reward-banner">
-		      			<div class="input-boxes">
-		      				<div class="row">
-		      					<select class="select-style"><option>100</option></select>
-		      					<input type="search" id="name" class="textbox" placeholder=" Enter Name "required> 
-		      				</div>
-		      				<div class="row">
-		      					<input type="text" id="name" class="large msgbox" placeholder=" Message " required> 
-		      				</div>
-		      			</div>
-		      			<div class="button-box">
-		      				<input type="button" id="reward-btn" class="reward-btn primary" value="Reward!">
-		      			</div>
-		      		</div>
-		      		<!-- main content  -->
-		      		<div class="main-content">
-		      			<div class="postbox">
-		      				<div class="thread"></div>
-		      			</div>
-		      			<div class="sidebox">
-		      				<div class="view-rewards">
-		      					<h3>View Rewards</h3>
-		      				</div>
-		      				<div class="leaderboards">
-		      					<h3>Leaderboards</h3>
-		      				</div>	
-		      			</div>
-		      		</div>
-		      	</div>
-		      	<div></div>
-	      </div>
-	    </div>
+		<div id="body">
+		  <div class="container">	        
+				<div class="outer-frame">
+					<div class="reward-banner">
+						<div class="values-box">
+							<img src="app/images/holiday.png" class="badge-image">
+						</div>
+						<div class="input-boxes">
+							<div class="row">
+								<input type="search" id="name" class="textbox" placeholder=" Enter Name "required> 
+							</div>
+							<div class="row">
+								<input type="text" id="name" class="large msgbox" placeholder=" Message " required> 
+							</div>
+						</div>
+						<div class="button-box">
+							<input type="button" id="reward-btn" class="reward-btn primary" value="Reward!">
+						</div>
+					</div>
+					<!-- main content  -->
+					<div class="main-content">
+						<div class="postbox">
+							<div class="thread">
+								<div class="thread-badge">
+									<img src="app/images/holiday.png" class="badge-image">
+								</div>
+								<div class="thread-content">
+									<div class="thread-title">
+										<p>Thread Title</p>
+									</div>
+									<div class="thread-message">
+										<p>this is a trial thread message. this is a trial thread message. this is a trial thread message.this is a trial thread message.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebox">
+							<div class="view-rewards">
+								<h3>View Rewards</h3>
+							</div>
+							<div class="leaderboards">
+								<h3>Leaderboards</h3>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div></div>
+		  </div>
+		</div>
 		<footer id="footer">
 		  <div class="container">
-		    <div id="copyright">
-		      Copyright © 2005-2016,
-		      <a href="http://advisory.com/" target="_blank">
-		        The Advisory Board Company
-		      </a>
-		    </div>
+			<div id="copyright">
+			  Copyright © 2005-2016,
+			  <a href="http://advisory.com/" target="_blank">
+				The Advisory Board Company
+			  </a>
+			</div>
 		  </div>
-		</footer>        
+		</footer>
+		<script id="thread-template" type="text/x-handlebars-template">
+			<div class="thread">
+				<div class="thread-badge">
+					<img src="{{imgpath}}" class="badge-image">
+				</div>
+				<div class="thread-content">
+					<div class="thread-title">
+						<p>{{receiver-name}} has received {{reward-name}} from {{rewarder-name}} </p>
+					</div>
+					<div class="thread-message">
+						<p>{{thread-message}}</p>
+					</div>
+				</div>
+			</div>
+		</script>        
 		<script src="crux/js/libs/jquery.js"></script>
-        <script src="crux/js/libs/jquery-ui.custom.js"></script>
-        <script src="crux/js/libs/handlebars.js"></script>
-        <script src="crux/js/libs/lodash.underscore.js"></script>
-        <script src="crux/js/libs/moment.js"></script>
-        <script src="crux/js/modernizr/modernizr.custom.js"></script>
-        <script src="crux/js/modernizr/cs.support.js"></script>
-        <script src="crux/js/libs/spin.js"></script>
-        <script src="crux/js/common/cs.core.js"></script>
-        <script src="crux/js/common/cs.helpers.js"></script>
-        <script src="crux/js/common/cs.jquery.js"></script>
-        <script src="crux/js/common/cs.logo.js"></script>
-        <script src="crux/js/common/cs.visibility.js"></script>
-        <script src="crux/js/common/jquery.spin.js"></script>
-        <script src="crux/js/common/cs.queue.js"></script>
-        <script src="crux/js/widgets/cs.base.js"></script>
-        <script src="crux/js/widgets/cs.popover.js"></script>
-        <script src="crux/js/widgets/cs.ellipsr.js"></script>
-        <script src="crux/js/widgets/cs.loadr.js"></script>
-        <script src="crux/js/widgets/cs.selectr.js"></script>
-        <script src="app/js/main.js"></script>
-    </body>
+		<script src="crux/js/libs/jquery-ui.custom.js"></script>
+		<script src="crux/js/libs/handlebars.js"></script>
+		<script src="crux/js/libs/lodash.underscore.js"></script>
+		<script src="crux/js/libs/moment.js"></script>
+		<script src="crux/js/modernizr/modernizr.custom.js"></script>
+		<script src="crux/js/modernizr/cs.support.js"></script>
+		<script src="crux/js/libs/spin.js"></script>
+		<script src="crux/js/common/cs.core.js"></script>
+		<script src="crux/js/common/cs.helpers.js"></script>
+		<script src="crux/js/common/cs.jquery.js"></script>
+		<script src="crux/js/common/cs.logo.js"></script>
+		<script src="crux/js/common/cs.visibility.js"></script>
+		<script src="crux/js/common/jquery.spin.js"></script>
+		<script src="crux/js/common/cs.queue.js"></script>
+		<script src="crux/js/widgets/cs.base.js"></script>
+		<script src="crux/js/widgets/cs.popover.js"></script>
+		<script src="crux/js/widgets/cs.ellipsr.js"></script>
+		<script src="crux/js/widgets/cs.loadr.js"></script>
+		<script src="crux/js/widgets/cs.selectr.js"></script>
+		<script src="app/js/main.js"></script>
+	</body>
 </html>
 		
