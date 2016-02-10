@@ -8,6 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="lunalite/css/lunalite.css">
 		<link rel="stylesheet" type="text/css" href="crux/css/widgets.css">
 		<link rel="stylesheet" type="text/css" href="app/css/homepage.css">
+		<script id="entry-template" type="text/x-handlebars-template">
+        <div>
+                {{#each Dataset}}
+                   <div class="popup-item">
+							<img src={{imgurl}} id={{id}} class="popup-item-image">	
+					</div>
+                {{/each}}       
+                </div>  
+        </script>  
 	</head>
 	<body>
 		<header id="header">
@@ -34,10 +43,11 @@
 				<div class="outer-frame">
 					<div class="reward-banner">
 						<div class="values-box">
-							<img src="app/images/holiday.png" class="badge-image">
+							<img src="app/images/holiday.png" class="badge-image" id="badgecontrol">
 						</div>
 						<div class="input-boxes">
 							<div class="row">
+								<label class="badge-label"></label>
 								<input type="search" id="name" class="textbox" placeholder=" Enter Name "required> 
 							</div>
 							<div class="row">
@@ -51,6 +61,34 @@
 					<!-- main content  -->
 					<div class="main-content">
 						<div class="postbox">
+							<div class="thread">
+								<div class="thread-badge">
+									<img src="app/images/holiday.png" class="badge-image">
+								</div>
+								<div class="thread-content">
+									<div class="thread-title">
+										<p>Thread Title</p>
+									</div>
+									<div class="thread-message">
+										<p>this is a trial thread message. this is a trial thread message. this is a trial thread message.this is a trial thread message.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="thread">
+								<div class="thread-badge">
+									<img src="app/images/holiday.png" class="badge-image">
+								</div>
+								<div class="thread-content">
+									<div class="thread-title">
+										<p>Thread Title</p>
+									</div>
+									<div class="thread-message">
+										<p>this is a trial thread message. this is a trial thread message. this is a trial thread message.this is a trial thread message.</p>
+									</div>
+								</div>
+							</div>
+
 							<div class="thread">
 								<div class="thread-badge">
 									<img src="app/images/holiday.png" class="badge-image">

@@ -121,11 +121,28 @@ h2,h3,p{
 
 }
 
+.thread:hover{
+	width:95%;
+	text-align:center;
+	margin:10 auto;
+	background-color: white;
+	border: 2px solid lightblue;
+	border-radius: 5px;
+	height:100px;
+
+}
+
 .selection{
 	float:right;
 }
 
-.badge-image{
+.badge-image, .popup-item-image{
+margin:5%;
+width:90%;
+height:90%;
+}
+
+.popup-badge-image{
 margin:5%;
 width:90%;
 height:90%;
@@ -158,3 +175,48 @@ height:90%;
 	box-sizing:border-box;
 }
 
+.popup-item{
+	width:490px;
+	text-align:left;	
+	float:left;
+	background-color: white;
+	border-radius: 5px;
+	height:92px;
+}
+
+.popup-item-badge{
+	display:inline-block;
+	width:5%;
+	height: 50%;
+	float:left;
+	background-color: white;	
+	border-radius: 5px;
+	border-width: 1px;
+}
+
+.popup-item-content{
+	width:75%;
+	display: inline-block;
+	text-align: left;
+	float:left;
+	margin-left: 20px;
+}
+
+.cs-popover-content{
+	width:500px;
+	height: 400px;
+}
+
+.badge-label{
+
+    display: inline-block;
+    margin-bottom: 8px;
+    width: 30%;    
+    color: aquamarine;
+    text-align: left;
+    font-size: larger;
+    font-style: italic;
+    font-family: initial;
+    font-weight: bolder;
+
+}
