@@ -3,7 +3,7 @@ body{
 
 }
 
-h2{
+h2,h3{
 	margin-top: 0px !important;
 }
 
@@ -57,10 +57,10 @@ h2{
 .reward-btn{
 
 	float:right;
-	padding:35px !important;
+	padding:20% !important;
 	margin-top:0px !important;
 	display: inline-block;
-	font-size: 30px;
+	font-size: 1.5em;
 	border-radius: 7px !important;
 
 }
@@ -78,4 +78,45 @@ h2{
 {
 	width:100%;
 	margin-bottom:0px !important;
+}
+
+.postbox{
+	width:68%;
+	padding:10px;
+	border-radius: 10px;
+	text-align:center;
+	margin:0 auto;
+	background-color: grey;
+	display:inline-block;
+
+}
+
+.sidebox{
+	width:25%;
+	padding:10px;
+	border-radius: 10px;
+	display: inline-block;
+    float:right;
+    background-color: grey;
+    text-align:center;
+	margin:0 auto;
+
+}
+
+.main-content{
+	margin-top:30px;
+}
+
+.thread,.view-rewards, .leaderboards{
+	width:95%;
+	text-align:center;
+	margin:10 auto;
+	background-color: white;
+	border-radius: 5px;
+	height:100px;
+
+}
+
+.selection{
+	float:right;
 }
