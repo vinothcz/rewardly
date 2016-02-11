@@ -9,6 +9,13 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/v1.png", name:"Force o
 "value3":{iconurl: "app/icons/v3.png", name:"Run to Criticism"} , 
  "value4":{iconurl: "app/icons/v4.png", name:"Spirit of Generosity"}}; 
 
+
+var leaderboards = { lbdata : [{username: "vinod" , badgecount: "1"} ,
+       {username: "mustafa" , badgecount: "3"},
+       {username: "zeruba" , badgecount: "3"},
+       {username: "jefree" , badgecount: "1"},
+       {username: "krishna" , badgecount: "1"} ]};
+
 var badgecontrol = $('#badgecontrol');
 var selecteduserId, selecteduserName = '';
 var username = localStorage.getItem("username");
@@ -19,6 +26,9 @@ var currentuser = {
 }
 //var currentuserid = document.cookie.userId;
 var selectedValue;
+var lbsource   = $("#leaderboard-template").html();
+var lbtemplate = Handlebars.compile(lbsource);        
+var lbcompiled  =  lbtemplate(leaderboards);
 
 
 $(document).ready(function(){
@@ -37,6 +47,8 @@ $(document).ready(function(){
 		},
 		direction: 'bottom'
 	});
+
+	$("#lb-content").html(lbcompiled);
 
 	$('#badgecontrol').on('click', function () {				
 		badgecontrol.popover('show');            

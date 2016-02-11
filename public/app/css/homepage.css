@@ -121,15 +121,24 @@ em{
 	margin-top:30px;
 }
 
-.thread,.view-rewards, .leaderboards{
+.thread,.view-rewards {
 	width:95%;
 	text-align:center;
 	margin:10 auto;
 	background-color: white;
 	border-radius: 5px;
 	height:100px;
+	
 
 }
+.leaderboards{
+	width:95%;
+	text-align:center;
+	margin:10 auto;
+	background-color: #388C90;
+	border-radius: 5px;
+	height:auto;
+	}
 
 .thread:hover{
 	width:95%;
@@ -228,5 +237,22 @@ height:90%;
     font-style: italic;
     font-family: initial;
     font-weight: bolder;
+
+}
+
+.lb-name{
+ width:60%;
+ float:left;
+}
+
+.fame-label{
+	font-family: cursive;
+    font-weight: bold;
+    color: black;
+}
+
+.lb-badge{
+ width:40%;
+ float:right;
 
 }
