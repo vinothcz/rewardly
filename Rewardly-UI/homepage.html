@@ -49,7 +49,7 @@
 							<div class="row">
 								<label class="badge-label"></label>
 								<!-- <input type="search" id="name" class="textbox" placeholder=" Enter Name "required>  -->
-								<input class="suggestr"  data-cs-url="http://localhost:3007/api/users"  data-cs-items="10" />
+								<input class="suggestr textbox"  data-cs-url="http://localhost:3007/api/users"  data-cs-items="10" />
 							</div>
 							<div class="row">
 								<input type="text" id="name" class="large msgbox" placeholder=" Message " required> 
@@ -62,34 +62,6 @@
 					<!-- main content  -->
 					<div class="main-content">
 						<div class="postbox">
-							<div class="thread">
-								<div class="thread-badge">
-									<img src="app/images/holiday.png" class="badge-image">
-								</div>
-								<div class="thread-content">
-									<div class="thread-title">
-										<p>Thread Title</p>
-									</div>
-									<div class="thread-message">
-										<p>this is a trial thread message. this is a trial thread message. this is a trial thread message.this is a trial thread message.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="thread">
-								<div class="thread-badge">
-									<img src="app/images/holiday.png" class="badge-image">
-								</div>
-								<div class="thread-content">
-									<div class="thread-title">
-										<p>Thread Title</p>
-									</div>
-									<div class="thread-message">
-										<p>this is a trial thread message. this is a trial thread message. this is a trial thread message.this is a trial thread message.</p>
-									</div>
-								</div>
-							</div>
-
 							<div class="thread">
 								<div class="thread-badge">
 									<img src="app/images/holiday.png" class="badge-image">
@@ -134,10 +106,10 @@
 				</div>
 				<div class="thread-content">
 					<div class="thread-title">
-						<p>{{receiver-name}} has received {{reward-name}} from {{rewarder-name}} </p>
+						<p>{{receivername}} has received <em>{{rewardname}}</em> from {{rewardername}} </p>
 					</div>
 					<div class="thread-message">
-						<p>{{thread-message}}</p>
+						<p>{{threadmessage}}</p>
 					</div>
 				</div>
 			</div>
@@ -163,6 +135,7 @@
 		<script src="crux/js/widgets/cs.loadr.js"></script>
 		<script src="crux/js/widgets/cs.selectr.js"></script>
 		<script src="app/js/main.js"></script>
+		<script src="app/js/post-template.js"></script>
 		<script src="crux/js/widgets/cs.suggestr.js"></script>
 	</body>
 </html>
