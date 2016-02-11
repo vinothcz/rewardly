@@ -68,12 +68,12 @@
 							</div>
 						</div>
 						<div class="sidebox">
-							<div class="view-rewards">
-								<h3>View Rewards</h3>
-							</div>
 							<div class="leaderboards">
-								<h3>Leaderboards</h3>
-							</div>	
+       							 <h3 class="fame-label fame-label-color">Wall of Fame!!</h3>
+						         <div id="lb-content">
+						         </div> 
+						         <br style="clear: both;" />
+       						</div>
 						</div>
 					</div>
 				</div>
@@ -105,6 +105,20 @@
 				</div>
 			</div>
 		</script>
+		<script type="text/x-handlebars-template" id="leaderboard-template">
+		    <div class="lb-name fame-label" >
+		     <p><em>Username</em></p>
+		     {{#each lbdata}}
+		     <p class="user-label-color">{{username}}</p>
+		     {{/each}}
+		    </div>
+		    <div class="lb-badge fame-label">
+		     <p><em>Badges</em></p>
+		     {{#each lbdata}}
+		     <p class="user-label-color">{{badgecount}}</p>
+		     {{/each}}
+		    </div>
+  		</script>
 		<script type="text/x-handlebars-template" id="suggestr-template">
 			<li id={{value}}>{{text}}</li>
 		</script>        
