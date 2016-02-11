@@ -188,7 +188,6 @@ height:90%;
 .popup-item{
 	width:490px;
 	text-align:left;	
-	float:left;
 	background-color: white;
 	border-radius: 5px;
 	height:92px;
@@ -212,10 +211,6 @@ height:90%;
 	margin-left: 20px;
 }
 
-.cs-popover-content{
-	width:500px;
-	height: 400px;
-}
 
 .badge-label{
 
@@ -229,4 +224,13 @@ height:90%;
     font-family: initial;
     font-weight: bolder;
 
+}
+
+.error{
+	border: 3px solid red;
+	background-color: pink;
+}
+
+.imgerror{
+	color: red;
 }

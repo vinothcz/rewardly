@@ -35,7 +35,8 @@ $(document).ready(function(){
 			var html    = template(data);        	
 			curry(html);
 		},
-		direction: 'bottom'
+		direction: 'bottom',
+    	width: '500px'
 	});
 
 	$('#badgecontrol').on('click', function () {				
@@ -48,7 +49,7 @@ $(document).ready(function(){
 		badgecontrol.attr('src',item.iconurl);
 		$('.badge-label').text(item.name);
 		badgecontrol.popover('hide');
-
+		$("#badgeerror").hide();
 	});
 
 	$('.suggestr').suggestr({
@@ -96,6 +97,7 @@ $(document).ready(function(){
  
 	 var msg = $('#message').val();
 
+	 if(selectedValue != "" && selecteduserId != "" && msg !=""){
 	 var settings = {
 	   "async": true,
 	   "crossDomain": true,
@@ -128,6 +130,32 @@ $(document).ready(function(){
 		  
 		  socket.emit('messages', message);
 	 });
+	}
+	else
+	{
+		if(selecteduserId == '' || selecteduserId == undefined){
+			$(".suggestr").addClass('error');
+		}
+		if(selectedValue == '' || selectedValue == undefined){
+			$("#badgeerror").show();
+		}
+		if(msg == '' || msg == undefined){
+            $("#message").addClass('error');
+		}
+	}
 	});
 
+		
+	$(".suggestr").on("blur", function(){
+		if(($(this).text != '') && ($(this).hasClass("error")))
+		{
+			$(this).removeClass('error');
+		}
+	 });
+	$("#message").on("blur", function(){
+		if(($(this).text != '') && ($(this).hasClass("error")))
+		{
+			$(this).removeClass('error');
+		}
+	 });
 });

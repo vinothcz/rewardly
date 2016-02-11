@@ -44,12 +44,13 @@
 					<div class="reward-banner">
 						<div class="values-box">
 							<img src="app/images/holiday.png" class="badge-image" id="badgecontrol">
+							<span id="badgeerror" class="imgerror" style="display:none">Select image</span>
 						</div>
 						<div class="input-boxes">
 							<div class="row">
 								<label class="badge-label"></label>
 								<!-- <input type="search" id="name" class="textbox" placeholder=" Enter Name "required>  -->
-								<input class="suggestr textbox" placeholder=" Enter Name " required data-cs-url="https://rewardlyapi.herokuapp.com/api/users" data-cs-items="10" data-cs-template="suggestr-template" />
+								<input class="suggestr textbox" id="suggesteduser" placeholder=" Enter Name " required data-cs-url="https://rewardlyapi.herokuapp.com/api/users" data-cs-items="10" data-cs-template="suggestr-template" />
 							</div>
 							<div class="row">
 								<input type="text" id="message" class="large msgbox" placeholder=" Message " required> 
