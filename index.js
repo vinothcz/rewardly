@@ -4,13 +4,15 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var path = require('path');
 
+var portNumber = process.env.PORT || 4200;
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res, next) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-server.listen(4200);
+server.listen(portNumber);
 
 io.on('connection', function (client) {
     console.log('Client connected...');
