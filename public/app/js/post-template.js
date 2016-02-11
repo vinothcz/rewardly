@@ -16,7 +16,6 @@ var templatecompile = Handlebars.compile(template);
 		crossDomain: true,
 		url: "https://rewardlyapi.herokuapp.com/api/rewards" ,
 		type: 'GET',
-//		headers: { 'Content-Type' : 'application/json' },
 		success: function (data) {
 
 		if ( data != null) 	{
@@ -26,7 +25,7 @@ var templatecompile = Handlebars.compile(template);
 		while (data[0][i] != null )  {
 		var currentItem = data[0][i];
 		var context = {	rewardname : idImageSourceMapping[currentItem.type].name ,
-				rewardername : currentItem.user_awarded.user_name ,
+				rewardername : currentItem.user_awarded.user_name || 'his colleague' ,
 				receivername: currentItem.user_recieved.user_name,
 				threadmessage : currentItem.points,
 				imgpath: idImageSourceMapping[currentItem.type].iconurl
