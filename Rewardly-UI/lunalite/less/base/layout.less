@@ -1,0 +1,28 @@
+@body-section-margin:   -88px;    // Height of footer and its margin
+@body-section-after:    88px;     // Height of footer and its margin
+@body-max-width:        1164px;
+@body-min-width:        936px;
+@body-padding:          @header-height;
+
+html, body {
+  height: 100%;
+}
+
+#body {
+  .border-box;
+  margin-bottom: @body-section-margin;
+  min-height: 100%;
+  padding-top: @body-padding;
+
+  &:after {
+    display: block;
+    content: '';
+    height: @body-section-after;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  min-width: @body-min-width;
+  .clear;
+}

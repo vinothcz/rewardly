@@ -1,0 +1,181 @@
+@header-text-color:       #fff;
+@header-bg-color:         @primary-black;
+@body-ie-padding:         84px;               // Height of header and nav in IE somehow
+@fixed-header-padding:    @header-height;
+
+
+#header.fixed-header {
+  position: fixed;
+}
+
+#header.fixed-header + #body {
+  padding-top: @fixed-header-padding;
+  margin-bottom: 0;
+}
+.oldie #header.fixed-header + #body {
+  padding-top: @body-ie-padding;
+}
+
+#header {
+  background: @header-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+
+  .title {
+    position: relative;
+    z-index: 1;
+    padding: 8px 0 7px 0;
+  }
+
+  h1 {
+    font-size: 18px;
+    z-index: 1;
+    margin: 0;
+    overflow: hidden;
+
+    i {
+      margin: 0;
+    }
+
+    em {
+      .bentonsansbold;
+      float: left;
+      color: @header-text-color;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding-left: 12px;
+      margin-left: 12px;
+      border-left: 1px solid #ccc;
+      line-height: 25px;
+      display: inline-block;
+    }
+
+    small {
+      .bentonsansregular;
+      font-size: 16px;
+      text-transform: none;
+      display: inline;
+      color: inherit;
+      margin-left: 6px;
+    }
+  }
+
+  .utilities {
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    list-style: none;
+    float: right;
+
+    & > li {
+      float: left;
+      margin-left: 20px;
+    }
+
+    li.utility-icon {
+      margin-left:10px;
+      border-radius: 2px;
+      background-color: @primary-black-190;
+
+      a {
+        padding: 0 16px;
+      }
+
+      i {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      color: @header-text-color;
+      font-size: 12px;
+      line-height: 25px;
+      display: block;
+    }
+  }
+
+  li.dropdown {
+
+    a.hover,
+    a:hover {
+      text-decoration: none;
+    }
+
+    div {
+      position: relative;
+      border-radius: 2px 2px 0 0;
+    
+      &.hover,
+      &:hover {
+        background: @primary-black-120;
+
+        ul {
+          display: block;
+        }
+      }
+
+      > a {
+        position: relative;
+        padding: 0 24px 0 8px;
+        cursor: default;
+      }
+    }
+
+    i {
+      border-color: @header-text-color;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      margin-top: -2px;
+      *margin-top: -6px;
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      min-width: 100%;
+      white-space: nowrap;
+      width: auto;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: @primary-black-120;
+      border-radius: 0 0 2px 2px;
+
+      &:first-child {
+        padding-top: .25em;
+        border: 1px solid #333;
+      }
+
+      a { 
+        padding: 0 8px;
+      }
+    }
+
+    .logout {
+      font-weight: bold;
+      border-top: 1px solid #333;
+
+      a {
+        line-height: 32px;
+      }
+    }
+
+  }
+
+  .search input {
+    margin: 8px 0 0;
+    border-radius: 2px;
+  }
+}
+
+#abclogo img {
+  float: left;
+  width: 33px;
+  height: 25px;
+}

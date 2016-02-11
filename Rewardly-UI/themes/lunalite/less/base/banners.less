@@ -1,0 +1,34 @@
+@banner-shadow-color:     rgba(43,45,48,0.85);
+@banner-margin-bottom:    24px;
+@banner-padding-bottom:   24px;
+
+.container.banner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: @banner-margin-bottom;
+  padding-bottom: @banner-padding-bottom;
+
+  &:before {
+    position: absolute;
+    background: rgb(43, 46, 48);
+    background-color: @banner-shadow-color;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: inherit;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, li {
+    color: #fff;
+  }
+}

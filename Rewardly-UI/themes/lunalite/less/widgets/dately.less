@@ -1,0 +1,205 @@
+@dately-bg:                 #fff;
+@dately-border-color:       @input-focus-border;
+@dately-border-inline:      @border;
+@dately-header-hover:       @primary-blue;
+@dately-text-color:         @primary-black;
+@dately-text-size:          12px;
+
+@dately-week-text:          @primary-black-80;
+@dately-week-bg:            @primary-black-10;
+@dately-header-text-size:   14px;
+
+@dately-other-month:        @primary-black-30;
+@dately-hover-other-bg:     @primary-black-10;
+@dately-hover-other-text:   @dately-text-color;
+@dately-hover-bg:           @primary-blue-10;
+@dately-hover-text:         @primary-blue-120;
+@dately-active-bg:          @primary-blue-40;
+@dately-active-text:        @primary-blue-150;
+@dately-today-border:       1px solid @primary-black-50;
+@dately-disabled-bg:        @primary-black-10;
+@dately-disabled-text:      @primary-black-60;
+
+@dately-date-height:        26px;
+@dately-month-height:       47px;
+
+
+.cs-dately-wrapper {
+  border: @dately-border-inline;
+  border-radius: 2px;
+  background-color: @dately-bg;
+  padding: 0 20px 6px;
+
+  &.cs-dately-popover {
+    .popover;
+    border-color: @dately-border-color;
+  }
+
+  a {
+    color: @dately-text-color;
+    display: block;
+    text-decoration: none;
+  }
+
+  table td {
+    border: 1px solid transparent;
+    height: @dately-date-height;
+    a {
+      line-height: @dately-date-height;
+    }
+  }
+  tr:last-child td {
+    padding: 0;
+  }
+
+  [class*="caret"] {
+    border-color: @dately-border-color;
+    position: absolute;
+    
+    &.east {
+      right: -6px;
+      top: 9px;
+    }
+     &.north {
+      left: 10px;
+      top: -6px; 
+
+      &.alignright {
+        left: auto;
+        right: 10px;
+      }    
+    }
+    &.south {
+      border-color: @dately-border-color;
+      bottom: -6px;
+      left: 10px;
+
+      &.alignright {
+        left: auto;
+        right: 10px;
+      } 
+
+      i {
+        display: block;
+      }    
+    }
+    &.west {
+      left: -6px;
+      top: 9px;
+    }
+  }
+
+  .cs-dately-disabled,
+  .cs-dately-disabled:hover,
+  .cs-dately-disabled a {
+    color: @dately-disabled-text;
+  }
+
+  .cs-dately-title.cs-dately-disabled { // Years title given disabled class
+    color: @dately-text-color;
+  }
+
+  .cs-dately-months, .cs-dately-years { // placed here to override crux core
+    a {
+      line-height: @dately-month-height;
+      height: @dately-month-height;
+      font-size: @dately-header-text-size;
+    }
+  }
+}
+
+.cs-dately-navigation {
+  padding: 6px;
+
+  a {
+    font-weight: bold;
+    font-size: @dately-header-text-size;
+
+    &:hover {
+      color: @dately-header-hover;
+    }
+  }
+
+  .cs-dately-dir {
+    top: 5px;
+    left: 4px;
+    width: 22px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 0.909;
+  }
+
+  .cs-dately-next {
+    right: 4px;
+    left: auto;
+  }
+}
+
+.cs-dately-body {
+
+  .cs-dately-active,
+  td:hover {
+    background-color: @dately-hover-bg;
+
+    a {
+      color: @dately-hover-text;
+    }
+  }
+
+  .cs-dately-disabled {
+    background-color: @dately-disabled-bg;
+
+    &:hover {
+      background: @dately-disabled-bg;
+      text-shadow: none;
+
+      a {
+        color: @dately-disabled-text;
+      }
+    }
+  }
+
+  .cs-dately-selected {
+    background-color: @dately-active-bg;
+
+    a {
+      color: @dately-active-text;
+    }
+  }
+}
+
+.cs-dately-dates {
+
+  th {
+    font-size: @dately-header-text-size;
+    font-weight: bold;
+    border: none;
+    background-color: @dately-week-bg;
+    color: @dately-week-text;
+  }
+
+  .cs-dately-today {
+    border: @dately-today-border;
+  }
+
+  .cs-dately-today.cs-dately-selected {
+    background-color: @dately-bg;
+
+    a {
+      color: @dately-text-color;
+    }
+  }
+
+  .cs-dately-other-month {
+    a {
+      color: @dately-other-month;
+    }
+
+    &:hover {
+      background-color: @dately-hover-other-bg;
+      a {
+        color: @dately-hover-other-text;
+      }
+    }
+  }
+}

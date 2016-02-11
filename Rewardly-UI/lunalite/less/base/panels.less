@@ -1,0 +1,24 @@
+@panel-padding:  23px 24px 23px;
+@panel-margin:   24px;
+
+.panel {
+  .border-box;
+  padding: @panel-padding;
+  border-radius: 4px;
+  margin-bottom: @panel-margin;
+  position: relative;
+  background-color: #fff;
+  border: @border;
+
+  &.card {
+    .box-shadow;
+  }
+
+  &.well {
+    background-color: @primary-black-10;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}

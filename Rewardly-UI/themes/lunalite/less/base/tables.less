@@ -1,0 +1,124 @@
+@table-border:          1px solid @primary-black-20;
+@table-head-text-color: @primary-black-70;
+@table-head-text-size:  12px;
+@table-colgroup-bg:     @primary-black-4;
+@table-padding:         12px;
+@bordered-padding:      12px 12px 11px;
+@table-zebra-bg:        @primary-black-2;
+
+table {
+  width: 100%;
+  margin-bottom: 16px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.oldie table {
+  border-bottom: @table-border;
+}
+
+thead {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  color: @table-head-text-color;
+
+  th {
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 0;
+    padding: @table-padding;
+    vertical-align: bottom;
+
+    &.cs-grid-colgroup {
+      background-color: @table-colgroup-bg;
+      border-top: @table-border;
+    }
+
+    &.cs-grid-colgroup-start {
+      border-left: @table-border;
+    }
+
+    &.cs-grid-colgroup-end {
+      border-right: @table-border;
+    }
+  }
+}
+
+td {
+  border-top: @table-border;
+  padding: @bordered-padding;
+  vertical-align: middle;
+}
+tbody tr + tr td {
+  border-top: @table-border;
+}
+tr {
+  &.cs-grid-super {
+
+    th {
+      padding: 7px 12px 0px;
+      border-bottom: none;
+      font-weight: bold;
+      text-align: center;
+      color: @primary-black;
+
+      &.cs-grid-colgroup {
+        border-left: @table-border;
+        border-right: @table-border;
+      }
+    }
+  }
+
+  &.cs-grid-super + tr th {
+    border-top: none;
+  }
+}
+
+tr:last-child td {
+  border-bottom: @table-border;
+  padding: 11px 12px 11px;
+}
+
+table.bordered {
+  
+  td {
+    border-left: @table-border;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+}
+
+.striped {
+
+  td {
+    border: none;
+    padding: @table-padding;
+  }
+
+  th {
+    border-bottom: @table-border;
+    padding: @bordered-padding; 
+  }
+
+  tbody tr:nth-child(odd) td {
+    background-color: @table-zebra-bg;
+  }
+
+  tr:last-child td {
+    padding: 12px 12px 11px;
+  }
+}
+
+
+.condensed {
+  font-size: 12px;
+  line-height: 16px;
+
+  tr:last-child td, td {
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+}

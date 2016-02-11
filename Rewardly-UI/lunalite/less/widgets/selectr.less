@@ -1,0 +1,320 @@
+@selectr-head-bg:       @primary-black-10;
+@selectr-footer-bg:     @primary-black-10;
+@selectr-footer-color:  @primary-black-90;
+@selectr-utility-link:  @primary-blue-120;
+@selectr-li-active-bg:  @primary-blue-150;
+
+.cs-selectr-link {
+  border-color: @general-border-color;
+  border-radius: 2px;
+  box-shadow: @input-inner-shadow;
+  font-size: 13px;
+  background-color: #fff;
+  color: @base-text-color;
+  min-height: 30px;
+  padding: 4px 12px 2px;
+
+  &.cs-selectr-focus {
+    border-color: @input-focus-border;
+    box-shadow: @input-focus-glow;
+  }
+}
+
+.cs-popover-content {
+  .popover;
+}
+
+.cs-selectr-head {
+  padding: 10px;
+  background-color: @selectr-head-bg;
+
+  input {
+    margin: 0;
+    border-color: @general-border-color;
+    border-radius: 2px;
+    box-shadow: @input-inner-shadow;
+  }
+
+  input[type=search] {
+    .border-box;
+  }
+}
+
+.cs-selectr-utilities {
+  border-top: @border;
+  background: @selectr-footer-bg;
+  color: @selectr-footer-color;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 8px;
+  line-height: 23px;
+  text-align: center;
+
+  span b {
+    font-weight: normal;
+  }
+  span:last-child {
+    float: inherit;
+  }
+  span.cs-selectr-toggles {
+    float: right;
+    text-transform: capitalize;
+    a {
+      text-transform: none;
+      color: @selectr-utility-link;
+    }
+  }
+}
+
+.cs-selectr-body {
+
+  li {
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 12px 6px 24px;
+    min-height: 20px;
+
+    &:hover {
+      .widget-hover;
+    }
+    &:active {
+      .widget-active;
+    }
+
+    &.cs-selectr-selected {
+      font-weight: 500;
+
+      &:hover {
+        &:before {
+          color: @primary-blue-120;
+        }
+      }
+    }
+
+    &.cs-selectr-selected, &:active {
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        content: '\2717';
+        line-height: 18px;
+        display: inline-block;
+        font-family: IconicStroke;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: normal;
+      }
+    }
+
+    &.cs-selectr-selected:active, &:active {
+      &:before {
+        color: @selectr-li-active-bg;
+      }
+    }
+
+    &.optgroup {
+      &:hover, 
+      &:active {
+        background-color: #fff;
+        color: @primary-black-90;
+        font-weight: normal;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .optgroup > div {
+    background-color: @primary-black-10;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+  }
+
+  ul.cs-selectr-multiple {
+
+    input {
+      position: absolute;
+      margin: 8px;
+    }
+
+    li {
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      padding: 6px 12px 6px 2px;
+
+      &:hover {
+        .widget-hover;
+      }
+
+      &:active {
+        .widget-active;
+      }
+    }
+
+    .optgroup {
+
+      > label {
+        background-color: @primary-black-10;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 6px 12px 6px 32px;
+      }
+    }
+
+    ul.cs-selectr-group > li {
+      padding-left: 14px;
+    }
+
+    .cs-selectr-noresults:hover {
+      background: #fff;
+      color: inherit;
+    }
+  }
+}
+
+.oldie {
+
+  .cs-selectr-body {
+
+    li.cs-selectr-selected,
+    li.cs-selectr-selected:active {
+      font-weight: bold;
+    }
+    li.cs-selectr-selected:active {
+      background-color: @primary-blue-10;
+    }
+  }
+
+  ul.cs-selectr-multiple {
+
+    label:active {
+      background-color: @primary-blue-10;
+    }
+
+    li > input {
+      margin-top: 3px;
+      margin-left: 0;
+    }
+
+    ul.cs-selectr-group li > input {
+      margin-top: 3px;
+      margin-left: -6px;
+    }
+
+    li.optgroup > input {
+      margin-top: 2px;
+      margin-left: 0;
+    }
+
+    li.optgroup > label {
+      padding-left: 28px;
+    }
+  }
+
+  .cs-selectr-link .cs-selectr-text {
+    width: 85%; // For ellipsr
+  }
+
+  .cs-selectr-body ul ul.cs-selectr-group label {
+    margin: 0;
+  }
+}
+
+.generatedcontent .cs-selectr-body ul.cs-selectr-multiple label {
+  padding-left: 32px;
+  margin: 0;
+}
+
+// Selectr 2.9 
+.cs-selectr-body [type="checkbox"] {
+  visibility: hidden;
+}
+
+.cs-selectr-body .cs-selectr-selected [type="checkbox"] {
+  visibility: visible;
+}
+
+.cs-selectr-body li {
+  position: static;
+  padding: 0;
+}
+
+.cs-selectr-body li > label {
+  padding: 6px 12px 6px 0;
+}
+
+.cs-selectr-body li.cs-selectr-selected:before,
+.cs-selectr-body li:active:before {
+  position: static;
+  top: auto;
+  left: auto;
+  content: '';
+  display: inline;
+  line-height: normal;
+}
+
+.generatedcontent .cs-selectr-body ul.cs-selectr-multiple label {
+  padding-left: 0;
+  margin-left: 0.5384em;
+}
+
+.cs-selectr-body ul.cs-selectr-multiple [type="checkbox"] {
+  visibility: visible;
+  position: relative;
+  margin: 0 8px 0 0;
+}
+
+.cs-selectr-body label {
+  margin-left: 0.5384em;
+  margin-bottom: 0;
+}
+
+.cs-selectr-body .optgroup > div {
+  padding: 6px 12px 6px 0;
+}
+
+.cs-selectr-body ul.cs-selectr-multiple div > label:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.cs-selectr-utilities span span:last-child {
+  float: none;
+}
+
+.cs-selectr-body li.cs-selectr-hover, .cs-selectr-body .cs-selectr-multiple li.optgroup.cs-selectr-hover > div {
+  background-color: #e9f2ff;
+  color: #2074e6;
+}
+
+.cs-selectr-body li.optgroup.cs-selectr-hover {
+  background-color: #fff;
+  color: #404345;
+}
+
+.ie8 input[type=checkbox] {
+  width: auto;
+  height: auto;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.ie8 .cs-selectr-body ul.cs-selectr-multiple input {
+  padding-top: 0;
+  padding-bottom: 3px;
+}

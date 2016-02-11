@@ -1,0 +1,33 @@
+@tooltip-padding:     8px 16px;
+@tooltip-line-height: 16px;
+
+.cs-popover-wrapper {
+
+  &.popover-dark {
+    [class*=caret], [class*=caret] i {
+      border-color: @primary-black;
+    }
+
+    .cs-popover-content {
+      color: #fff;
+      border: 0;
+      background-color: @primary-black;
+    }
+  }
+  &.popover-light {
+    .cs-popover-content {
+      color: @base-text-color;
+      background-color: #fff;
+      border: @border;
+    }
+  }
+  &.popover-dark,
+  &.popover-light {
+    .cs-popover-content {
+      padding: @tooltip-padding;
+      line-height: @tooltip-line-height;
+      font-weight: bold;
+      border-radius: 2px;
+    }
+  }
+}
