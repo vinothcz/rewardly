@@ -14,7 +14,7 @@ var templatecompile = Handlebars.compile(template);
 	$.ajax({
 		async: true,
 		crossDomain: true,
-		url: "https://rewardly.herokuapp.com/api/rewards" ,
+		url: "https://rewardlyapi.herokuapp.com/api/rewards" ,
 		type: 'GET',
 //		headers: { 'Content-Type' : 'application/json' },
 		success: function (data) {

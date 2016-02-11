@@ -70,7 +70,7 @@ $(document).ready(function(){
 	});
 
 	
-	var socket = io.connect('http://localhost:4200');
+	var socket = io.connect('https://rewardly.herokuapp.com');
     socket.on('connect', function(data) {
         socket.emit('join', 'Hello World from client');
     });
@@ -94,7 +94,7 @@ $(document).ready(function(){
 	 var settings = {
 	   "async": true,
 	   "crossDomain": true,
-	   "url": "https://rewardly.herokuapp.com/api/rewards",
+	   "url": "https://rewardlyapi.herokuapp.com/api/rewards",
 	   "method": "POST",
 	   "headers": {
 		 "content-type": "application/json",
