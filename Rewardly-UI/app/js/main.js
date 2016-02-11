@@ -10,8 +10,9 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"For
  "value4":{iconurl: "app/icons/value4.png", name:"Spirit of Generosity"}}; 
 
 var badgecontrol = $('#badgecontrol');
-var selecteduser = '';
-var currentuser = document.cookie;
+var selecteduserId, selecteduserName = '';
+var currentuser = JSON.parse(document.cookie);
+//var currentuserid = document.cookie.userId;
 var selectedValue;
 
 
@@ -61,8 +62,10 @@ $(document).ready(function(){
 			return parsedData;
 		},
 		select : function(e, obj) {
-			selecteduser = e.target.id;
-			$('.suggestr').val(e.target.innerText);
+			selecteduserId = e.target.id;
+			selecteduserName = e.target.innerText;
+
+			$('.suggestr').val(selecteduserName);
 		}
 	});
 
@@ -103,18 +106,20 @@ $(document).ready(function(){
 		{ 
 		 "type": selectedValue,
 		 "points": msg,
-		 "user_recieved": selecteduser,
-		 "user_awarded": currentuser.currentuserid 
+		 "user_recieved": selecteduserId,
+		 "user_awarded": currentuser.userid 
 		})
 
 	 }
 
 	 $.ajax(settings).done(function (response) {
+	 	var dataObj = JSON.parse(settings.data);
 		var message = {
-		  "receivername": settings.data.user_recieved,
-		  "rewardname": idImageSourceMapping[settings.data.type],
-		  "rewardername": settings.data.user_awarded,
-		  "threadmessage": settings.data.points};
+		  receivername: selecteduserName,
+		  rewardname: idImageSourceMapping[dataObj.type].name,
+		  rewardername: currentuser.username,
+		  threadmessage: dataObj.points,
+		  imgpath: idImageSourceMapping[dataObj.type].iconurl};
 		  
 		  socket.emit('messages', message);
 	 });

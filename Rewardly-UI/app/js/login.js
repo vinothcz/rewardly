@@ -23,8 +23,8 @@ $(document).ready( function(){
          }
          else
          {
-           document.cookie = {currentuserid: data.userId, currentusername: data.user_name};
-          window.location.replace('http://localhost:8000/homepage.html');
+           document.cookie = JSON.stringify({userid:data.userId ,username:data.user_name });
+           window.location.replace('http://localhost:8000/homepage.html');
       }
      },
      error: function (xhr, status, error) {

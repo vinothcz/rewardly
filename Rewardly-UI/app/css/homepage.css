@@ -1,12 +1,15 @@
 body{
-	background-color: #F3DB81;
+	background-color: #f9f9f9;
 
 }
 
 h2,h3,p{
 	margin-top: 0px !important;
 }
-
+em{
+	font-size: 1.5em;
+	font-style: italic;
+}
 .app-title, .app-title:hover
 {
 	text-decoration: none;
@@ -22,6 +25,13 @@ h2,h3,p{
 
 }
 
+.default-thread{
+	background-color: lightgrey;
+	height: 30px;
+	width:95%;
+	margin: 0 auto;
+	border-radius: 5px;
+}
 
 .outer-frame{
 
@@ -115,7 +125,7 @@ h2,h3,p{
 	width:95%;
 	text-align:center;
 	margin:10 auto;
-	background-color: white;
+	background-color: #f3f3f3;
 	border-radius: 5px;
 	height:100px;
 
