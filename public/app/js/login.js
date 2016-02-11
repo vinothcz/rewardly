@@ -12,7 +12,7 @@ $(document).ready( function(){
   $.ajax({
   type: 'POST',
      contentType: 'application/json',
-     url: 'https://rewardly.herokuapp.com/api/users/authenticate',   
+     url: 'https://rewardlyapi.herokuapp.com/api/users/authenticate',   
      data: JSON.stringify(
     { 
      email: username
@@ -24,7 +24,7 @@ $(document).ready( function(){
          else
          {
            document.cookie = JSON.stringify({userid:data.userId ,username:data.user_name });
-           window.location.replace('http://localhost:8000/homepage.html');
+           window.location.replace('https://rewardly.herokuapp.com/homepage.html');
       }
      },
      error: function (xhr, status, error) {
