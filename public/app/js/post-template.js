@@ -1,9 +1,9 @@
 'use strict';
 
-var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"Force of Insight"} , 
-"value2":{iconurl: "app/icons/value2.png", name:"Power of Language"} , 
-"value3":{iconurl: "app/icons/value3.png", name:"Run to Criticism"} , 
- "value4":{iconurl: "app/icons/value4.png", name:"Spirit of Generosity"}};
+var idImageSourceMapping = {"value1":{iconurl: "app/icons/v1.png", name:"Force of Insight"} , 
+"value2":{iconurl: "app/icons/v2.png", name:"Power of Language"} , 
+"value3":{iconurl: "app/icons/v3.png", name:"Run to Criticism"} , 
+ "value4":{iconurl: "app/icons/v4.png", name:"Spirit of Generosity"}};
 
 $(document).ready( 	function(){
 
