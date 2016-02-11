@@ -23,8 +23,9 @@ $(document).ready( function(){
          }
          else
          {
-           document.cookie = JSON.stringify({userid:data.userId ,username:data.user_name });
-           window.location.replace('https://rewardly.herokuapp.com/homepage.html');
+           localStorage.setItem("userid", data.userId);
+           localStorage.setItem("username", data.user_name  );
+           window.location.replace('http://localhost:4200/homepage.html');
       }
      },
      error: function (xhr, status, error) {

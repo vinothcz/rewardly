@@ -11,7 +11,12 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"For
 
 var badgecontrol = $('#badgecontrol');
 var selecteduserId, selecteduserName = '';
-var currentuser = JSON.parse(document.cookie);
+var username = localStorage.getItem("username");
+var userid = localStorage.getItem("userid");
+var currentuser = {
+	"username": username,
+	"userid": userid
+}
 //var currentuserid = document.cookie.userId;
 var selectedValue;
 
