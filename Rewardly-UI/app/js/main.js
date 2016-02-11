@@ -9,7 +9,7 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"For
 "value3":{iconurl: "app/icons/value3.png", name:"Run to Criticism"} , 
  "value4":{iconurl: "app/icons/value4.png", name:"Spirit of Generosity"}}; 
 
-
+var badgecontrol = $('#badgecontrol');
 
 $(document).ready(function(){
 	$('.selectrEl').selectr({
@@ -28,15 +28,16 @@ $(document).ready(function(){
     	direction: 'bottom'
 	});
 
-	$('#badgecontrol').on('click', function () {
-		var badgecontrol = $('#badgecontrol');		
+	$('#badgecontrol').on('click', function () {				
     	badgecontrol.popover('show');            
 	});
 
 	$(document).on('click','.popup-item-image', function(){
 		var item = idImageSourceMapping[this.id];
-		$('#badgecontrol').attr('src',item.iconurl);
+		badgecontrol.attr('src',item.iconurl);
 		$('.badge-label').text(item.name);
+		badgecontrol.popover('hide');
+
 	});
 
 	$('.suggestr').suggestr();

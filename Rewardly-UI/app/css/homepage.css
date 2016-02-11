@@ -15,7 +15,7 @@ h2,h3,p{
 
 }
 
-.textbox{
+.textbox, .suggestr{
 
     width: 60%;
     float: right;
