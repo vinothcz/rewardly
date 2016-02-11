@@ -43,6 +43,14 @@ $(document).ready(function(){
 
 	$('.suggestr').suggestr({
 		parse: function(data) {
+
+			data[0] = $.map( data[0], function( val, i ) {
+				return {
+					text: val.user_name,
+					value: val._id
+				}
+			});
+
 			var parsedData = {
 				Results: data[0]
 			}
@@ -50,6 +58,7 @@ $(document).ready(function(){
 		},
 		select : function(e, obj) {
 			selecteduser = e.target.id;
+			$('.suggestr').val(e.target.innerText);
 		}
 	});
 
