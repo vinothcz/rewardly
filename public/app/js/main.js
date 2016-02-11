@@ -10,9 +10,9 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/v1.png", name:"Force o
  "value4":{iconurl: "app/icons/v4.png", name:"Spirit of Generosity"}}; 
 
 
-var leaderboards = { lbdata : [{username: "vinod" , badgecount: "1"} ,
+var leaderboards = { lbdata : [{username: "zeruba" , badgecount: "3"} ,
        {username: "mustafa" , badgecount: "3"},
-       {username: "zeruba" , badgecount: "3"},
+       {username: "vinoth" , badgecount: "3"},
        {username: "jefree" , badgecount: "1"},
        {username: "krishna" , badgecount: "1"} ]};
 
