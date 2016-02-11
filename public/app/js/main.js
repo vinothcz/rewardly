@@ -1,13 +1,13 @@
 
-var data = {Dataset: [{imgurl:"app/images/value1.png", id:'value1'},
-					  {imgurl:"app/images/value2.png", id:'value2'},
-					  {imgurl:"app/images/value3.png", id:'value3'},
-					  {imgurl:"app/images/value4.png", id:'value4'}]};
+var data = {Dataset: [{imgurl:"app/images/v1.png", id:'value1'},
+					  {imgurl:"app/images/v2.png", id:'value2'},
+					  {imgurl:"app/images/v3.png", id:'value3'},
+					  {imgurl:"app/images/v4.png", id:'value4'}]};
 
-var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"Force of Insight"} , 
-"value2":{iconurl: "app/icons/value2.png", name:"Power of Language"} , 
-"value3":{iconurl: "app/icons/value3.png", name:"Run to Criticism"} , 
- "value4":{iconurl: "app/icons/value4.png", name:"Spirit of Generosity"}}; 
+var idImageSourceMapping = {"value1":{iconurl: "app/icons/v1.png", name:"Force of Insight"} , 
+"value2":{iconurl: "app/icons/v2.png", name:"Power of Language"} , 
+"value3":{iconurl: "app/icons/v3.png", name:"Run to Criticism"} , 
+ "value4":{iconurl: "app/icons/v4.png", name:"Spirit of Generosity"}}; 
 
 var badgecontrol = $('#badgecontrol');
 var selecteduserId, selecteduserName = '';
