@@ -111,7 +111,7 @@ em{
 	border-radius: 10px;
 	display: inline-block;
     float:right;
-    background-color: #BACBD8;
+    background-color: black;
     text-align:center;
 	margin:0 auto;
 
@@ -247,8 +247,14 @@ height:90%;
 
 .fame-label{
 	font-family: cursive;
-    font-weight: bold;
-    color: black;
+    font-weight: bold;    
+}
+
+.fame-label-color{
+	color:black;
+}
+.user-label-color{
+	color:white;
 }
 
 .lb-badge{
