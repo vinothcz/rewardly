@@ -25,7 +25,7 @@ $(document).ready( function(){
          {
            localStorage.setItem("userid", data.userId);
            localStorage.setItem("username", data.user_name  );
-           window.location.replace('http://localhost:4200/homepage.html');
+           window.location.replace('https://rewardly.herokuapp.com/homepage.html');
       }
      },
      error: function (xhr, status, error) {
