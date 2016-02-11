@@ -7,7 +7,7 @@ h2,h3,p{
 	margin-top: 0px !important;
 }
 em{
-	font-size: 1.5em;
+	font-size: 1.3em;
 	font-style: italic;
 }
 .app-title, .app-title:hover
@@ -84,7 +84,7 @@ em{
 		border-radius: 10px;
 		text-align:center;
 		margin:0 auto;
-		background-color: grey;
+		background-color: #BACBD8;
 
 }
 
@@ -100,7 +100,7 @@ em{
 	border-radius: 10px;
 	text-align:center;
 	margin:0 auto;
-	background-color: grey;
+	background-color: #BACBD8;
 	display:inline-block;
 
 }
@@ -111,7 +111,7 @@ em{
 	border-radius: 10px;
 	display: inline-block;
     float:right;
-    background-color: grey;
+    background-color: #BACBD8;
     text-align:center;
 	margin:0 auto;
 
@@ -125,7 +125,7 @@ em{
 	width:95%;
 	text-align:center;
 	margin:10 auto;
-	background-color: #f3f3f3;
+	background-color: white;
 	border-radius: 5px;
 	height:100px;
 
