@@ -10,6 +10,7 @@ var idImageSourceMapping = {"value1":{iconurl: "app/icons/value1.png", name:"For
  "value4":{iconurl: "app/icons/value4.png", name:"Spirit of Generosity"}}; 
 
 var badgecontrol = $('#badgecontrol');
+var selecteduser = '';
 
 $(document).ready(function(){
 	$('.selectrEl').selectr({
@@ -40,7 +41,17 @@ $(document).ready(function(){
 
 	});
 
-	$('.suggestr').suggestr();
+	$('.suggestr').suggestr({
+		parse: function(data) {
+			var parsedData = {
+				Results: data[0]
+			}
+			return parsedData;
+		},
+		select : function(e, obj) {
+			selecteduser = e.target.id;
+		}
+	});
 
 	$.ajax({
 		type: 'GET',
@@ -74,7 +85,7 @@ $("#reward-btn").click(function(){
 	  	{ 
 	  		"type": rewardtitle,
   			"points": "20",
-  			"user_recieved": "56bb18622f7f054d5d1be781",
+  			"user_recieved": selecteduser,
   			"user_awarded": "56bb1b762f7f054d5d1be782"
 	  	})
 
