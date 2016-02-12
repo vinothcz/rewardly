@@ -248,12 +248,19 @@ height:90%;
  
 }
 
+.fame-header {
+	background-color: #8199AB;
+    border-radius: 7px;
+     padding: 10 0;
+     color: aliceblue;
+}
+
 .user-label-color{
 	color:#4E5152;
 }
 
 .leader-header{
-    color:#4E5152;
+    color:#627479;
 }
 
 .lb-badge{
