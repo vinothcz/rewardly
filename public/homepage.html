@@ -70,7 +70,7 @@
 						</div>
 						<div class="sidebox">
 							<div class="leaderboards">
-       							 <h3 class="fame-label fame-label-color">Wall of Fame!!</h3>
+       							 <h3 class="fame-label">Wall of Fame!!</h3>
 						         <div id="lb-content">
 						         </div> 
 						         <br style="clear: both;" />
@@ -108,13 +108,13 @@
 		</script>
 		<script type="text/x-handlebars-template" id="leaderboard-template">
 		    <div class="lb-name fame-label" >
-		     <p><em>Username</em></p>
+		     <p><em class="leader-header">Username</em></p>
 		     {{#each lbdata}}
 		     <p class="user-label-color">{{username}}</p>
 		     {{/each}}
 		    </div>
 		    <div class="lb-badge fame-label">
-		     <p><em>Badges</em></p>
+		     <p><em class="leader-header">Badges</em></p>
 		     {{#each lbdata}}
 		     <p class="user-label-color">{{badgecount}}</p>
 		     {{/each}}

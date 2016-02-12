@@ -107,11 +107,10 @@ em{
 
 .sidebox{
 	width:25%;
-	padding:10px;
 	border-radius: 10px;
 	display: inline-block;
     float:right;
-    background-color: black;
+    background-color: #DCE1E4;
     text-align:center;
 	margin:0 auto;
 
@@ -135,7 +134,7 @@ em{
 	width:95%;
 	text-align:center;
 	margin:10 auto;
-	background-color: #388C90;
+	background-color: #BACBD8;
 	border-radius: 5px;
 	height:auto;
 	}
@@ -242,14 +241,19 @@ height:90%;
 
 .fame-label{
 	font-family: cursive;
-    font-weight: bold;    
+    font-weight: bold;  
+    padding-top: 10px;
+    margin-bottom: 0px;
+    color:#4E5152;
+ 
 }
 
-.fame-label-color{
-	color:black;
-}
 .user-label-color{
-	color:white;
+	color:#4E5152;
+}
+
+.leader-header{
+    color:#4E5152;
 }
 
 .lb-badge{
